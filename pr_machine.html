@@ -20,6 +20,7 @@
         <button onclick="change_base('hex')">Hex</button>
         <button onclick="change_base('oct')">Octal</button>
         <button onclick="change_base('decimal')">Decimal</button>
+        <button onclick="change_base('operations')">Operations</button>
       </div>
 
       <div class="base" id="decimal">
@@ -28,6 +29,7 @@
         Binary: <input id="binary_value_decimal" type="text" placeholder="Binary" disabled>
         Octal: <input id="octal_value_decimal" type="text" placeholder="Octal" disabled>
         Hex: <input id="hexadecimal_value_decimal" type="text" placeholder="Hex" disabled>
+        <!-- Base64: <input id="base64_value_decimal" type="text" placeholder="Base64" disabled> -->
         <button onclick="convert('decimal')">Converter</button>
       </div>
 
@@ -37,6 +39,7 @@
         Binary: <input id="binary_value_hex" type="text" placeholder="Binary" disabled>
         Octal: <input id="octal_value_hex" type="text" placeholder="Octal" disabled>
         Decimal: <input id="decimal_value_hex" type="text" placeholder="Decimal" disabled>
+        <!-- Base64: <input id="base64_value_hex" type="text" placeholder="Base64" disabled> -->
         <button onclick="convert('hex')">Converter</button>
       </div>
 
@@ -46,6 +49,7 @@
         Binary: <input id="binary_value_octal" type="text" placeholder="Binary" disabled>
         Decimal: <input id="decimal_value_octal" type="text" placeholder="Octal" disabled>
         Hex: <input id="hexadecimal_value_octal" type="text" placeholder="Hex" disabled>
+        <!-- Base64: <input id="base64_value_octal" type="text" placeholder="Base64" disabled> -->
         <button onclick="convert('octal')">Converter</button>
       </div>
 
@@ -55,11 +59,57 @@
         Decimal: <input id="decimal_value_binary" type="text" placeholder="Decimal" disabled>
         Octal: <input id="octal_value_binary" type="text" placeholder="Octal" disabled>
         Hex: <input id="hexadecimal_value_binary" type="text" placeholder="Hex" disabled>
+        <!-- Base64: <input id="base64_value_binary" type="text" placeholder="Base64" disabled> -->
         <button onclick="convert('binary')">Converter</button>
       </div>
 
+      <div class="base" id="operations">
+        <span>Add or Sub numbers</span>
+        <input type="text" id="first_number" placeholder="Your First number here">
+        <input type="text" id="second_number" placeholder="Your Second number here">
+        <input type="text" id="result_operation" placeholder="Result" disabled>
+        Select operation
+        <select id="operation_select">
+          <option value="">Choose an option</option>
+          <option value="sum">+</option>
+          <option value="sub">-</option>
+        </select>
+        Select base
+        <select id="base_select">
+          <option value="">Choose an option</option>
+          <option value="binary">Binary</option>
+          <option value="decimal">Decimal</option>
+          <option value="octal">Octal</option>
+          <option value="hex">Hex</option>
+        </select>
+        <span class="message"></span>
+        <button onclick="calc()">Calc</button>
+      </div>
+
+      <!-- <div class="base bitwise" id="bitwise">
+        <span>Bitwise</span>
+        <input type="text" id="first_binary" placeholder="Your First Binary here">
+        <input type="text" id="second_binary" placeholder="Your Second Binary here">
+        <input type="text" id="result_bitwise" disabled>
+        Select operator
+        <select id="operator_select">
+          <option value="and">&</option>
+          <option value="or">|</option>
+          <option value="shift_left"><<</option>
+          <option value="shift_right">>></option>
+        </select>
+        <button onclick="calc()">Calcular</button>
+      </div> -->
+
+      <!-- <div class="base" id="base64">
+        <span>Base64</span>
+        <input type="text" id="base_value_base">
+      </div> -->
+
     </main>
-    
+    <footer>
+      Made with ❤ by Pedro Morais and Rafael Pavani
+    </footer>
   </body>
 </html>
 <script src="./script.js"></script>
