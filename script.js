@@ -29,6 +29,7 @@ let theme = localStorage.getItem("theme")
 if(theme == 'dark'){
   document.body.classList.add('dark-theme')
   switchImage.src = './img/sun.png'
+  themeToggle.checked = true
 }else{
    switchImage.src = './img/moon.png'
 }
