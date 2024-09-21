@@ -17,19 +17,19 @@ body{
   --secondary-color: #48CFCB;
   --terciary-color: #229799;
   --text-color: #000;
-  --text-color-secondary: #000;
+  --text-color-secondary: #111;
   --button-secondary-color: #424242;
   --red: #880808;
 
 }
 
 body.dark-theme{
-  --primary-color: #484848;
-  --secondary-color: ##687387;
-  --terciary-color: #8B94A5;
-  --text-color: #BECBD6;
+  --primary-color: #121212;
+  --secondary-color: #282828;
+  --terciary-color: #3f3f3f;
+  --text-color: #8b8b8b;
   --text-color-secondary: #111;
-  --button-secondary-color: #ADD8E6;
+  --button-secondary-color: #575757;
   --red: #880808;
 }
 
@@ -42,6 +42,16 @@ button:hover{
   position: absolute;
   top: 20px;
   right: 20px;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.switch .switch-image{
+  width: 28px;
 }
 
 .switch label {

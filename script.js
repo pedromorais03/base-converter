@@ -1,5 +1,6 @@
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.getElementsByTagName('body')[0]
+const themeToggle = document.getElementById('theme-toggle')
+const switchImage = document.querySelector('.switch-image')
+const switchImageDiv = document.querySelector('.switch-image-div')
 
 const binaryDiv = document.querySelector('#binary')
 const octDiv = document.querySelector('#oct')
@@ -23,22 +24,29 @@ const selectBase = document.getElementById("base_select")
 
 const spanMessage = document.querySelector(".message")
 
+let theme = localStorage.getItem("theme")
+
+if(theme == 'dark'){
+  document.body.classList.add('dark-theme')
+  switchImage.src = './img/sun.png'
+}else{
+   switchImage.src = './img/moon.png'
+}
+
 allBases.forEach(e => {
   e.style.display = 'none'
 })
 
 themeToggle.addEventListener('change', function() {
-  document.body.classList.toggle('dark-theme', this.checked);
+  document.body.classList.toggle('dark-theme', this.checked)
+  if(this.checked){
+    switchImage.src = './img/sun.png'
+    localStorage.setItem('theme', 'dark')
+  }else{
+    switchImage.src = './img/moon.png'
+    localStorage.setItem('theme', 'light')
+  }
 })
-
-// function change_color(){
-//   if(body.classList.length == 0){
-//     body.classList.add('black-theme')
-//   }else{
-//     body.classList.remove('black-theme')
-//   }
-//   console.log(body.classList)
-// }
 
 function change_base(selectedBase){
 
@@ -172,10 +180,6 @@ function calc(){
       result = (n1 + n2).toString(2)
     }else if(selectOperation.value == 'sub'){
       result = (n1 - n2).toString(2)
-    }else if(selectOperation.value == 'div'){
-      result = (n1 / n2).toString(2)
-    }else if(selectOperation.value == 'mult'){
-      result = (n1 * n2).toString(2)
     }
     result_operation.value = result
   }else if(selectBase.value == 'octal'){
@@ -187,10 +191,6 @@ function calc(){
       result = (n1 + n2).toString(8)
     }else if(selectOperation.value == 'sub'){
       result = (n1 - n2).toString(8)
-    }else if(selectOperation.value == 'div'){
-      result = (n1 / n2).toString(8)
-    }else if(selectOperation.value == 'mult'){
-      result = (n1 * n2).toString(8)
     }
     result_operation.value = result
   }else if(selectBase.value == 'hex'){
@@ -202,10 +202,6 @@ function calc(){
       result = (n1 + n2).toString(16)
     }else if(selectOperation.value == 'sub'){
       result = (n1 - n2).toString(16)
-    }else if(selectOperation.value == 'div'){
-      result = (n1 / n2).toString(16)
-    }else if(selectOperation.value == 'mult'){
-      result = (n1 * n2).toString(16)
     }
     result_operation.value = result
 
@@ -218,10 +214,6 @@ function calc(){
       result = (n1 + n2)
     }else if(selectOperation.value == 'sub'){
       result = (n1 - n2)
-    }else if(selectOperation.value == 'div'){
-      result = (n1 / n2)
-    }else if(selectOperation.value == 'mult'){
-      result = (n1 * n2)
     }
     result_operation.value = result
   }
