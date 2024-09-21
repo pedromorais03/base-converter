@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    
+  </head>
   <body>
+    <div class="switch">
+      <label>
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+      </label>
+    </div>
     <main class="container">
+      <!-- <button onclick="change_color()">Switch</button> -->
       <h1>PR's Machine</h1>
 
       <div class="container-buttons">
@@ -64,7 +72,7 @@
       </div>
 
       <div class="base" id="operations">
-        <span>Add or Sub numbers</span>
+        <span>Operations</span>
         <input type="text" id="first_number" placeholder="Your First number here">
         <input type="text" id="second_number" placeholder="Your Second number here">
         <input type="text" id="result_operation" placeholder="Result" disabled>
@@ -73,6 +81,8 @@
           <option value="">Choose an option</option>
           <option value="sum">+</option>
           <option value="sub">-</option>
+          <option value="div">/</option>
+          <option value="mult">*</option>
         </select>
         Select base
         <select id="base_select">
@@ -108,7 +118,7 @@
 
     </main>
     <footer>
-      Made with ❤ by Pedro Morais and Rafael Pavani
+      Made with ❤ by Pedro Morais
     </footer>
   </body>
 </html>

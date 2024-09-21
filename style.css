@@ -6,19 +6,85 @@
   font-family: 'Poppins', sans-serif;
 }
 
-:root{
-  --white: #FFF;
-  --primary-color: #363636;
-  --secondary-color: #687387;
+/* :root{
+ 
+ 
+} */
+
+body{
+  --white: #eee;
+  --primary-color: #F5F5F5;
+  --secondary-color: #48CFCB;
+  --terciary-color: #229799;
+  --text-color: #000;
+  --text-color-secondary: #000;
+  --button-secondary-color: #424242;
+  --red: #880808;
+
+}
+
+body.dark-theme{
+  --primary-color: #484848;
+  --secondary-color: ##687387;
   --terciary-color: #8B94A5;
   --text-color: #BECBD6;
-  --text-color-secondary: #000;
+  --text-color-secondary: #111;
   --button-secondary-color: #ADD8E6;
+  --red: #880808;
 }
 
 button:hover{
   transition: .5s all ease;
   scale: 1.1;
+}
+
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch label {
+  display: block;
+  width: 60px;
+  height: 34px;
+  position: relative;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--red);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 .container{
@@ -83,7 +149,8 @@ button:hover{
 }
 
 .container .base input:disabled{
-  color: var(--white);
+  border: 1px solid var(--secondary-color);
+  color: var(--text-color);
 }
 
 .container .base button{
@@ -92,7 +159,7 @@ button:hover{
   border-radius: 20px;
 
   background-color: var(--button-secondary-color);
-  color: var(--text-color-secondary);
+  color: var(--white);
 
   padding: 15px 20px;
   margin-top: 10px;

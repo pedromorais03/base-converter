@@ -1,3 +1,6 @@
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.getElementsByTagName('body')[0]
+
 const binaryDiv = document.querySelector('#binary')
 const octDiv = document.querySelector('#oct')
 const decimalDiv = document.querySelector('#decimal')
@@ -24,6 +27,18 @@ allBases.forEach(e => {
   e.style.display = 'none'
 })
 
+themeToggle.addEventListener('change', function() {
+  document.body.classList.toggle('dark-theme', this.checked);
+})
+
+// function change_color(){
+//   if(body.classList.length == 0){
+//     body.classList.add('black-theme')
+//   }else{
+//     body.classList.remove('black-theme')
+//   }
+//   console.log(body.classList)
+// }
 
 function change_base(selectedBase){
 
@@ -82,7 +97,7 @@ function convert(selectedBase){
       baseBinary.style.color = 'red'
     }
   }else if(selectedBase == 'decimal'){
-    if(baseDecimal.value.match(/^[0123456789]+$/)){
+    if(baseDecimal.value.match(/^[0-9]+$/)){
       let decimal = parseInt(baseDecimal.value)
       let binary = decimal.toString(2)
       let octal = decimal.toString(8)
@@ -114,7 +129,7 @@ function convert(selectedBase){
    
 
   }else{
-    if(baseOct.value.match(/^[01234567]+$/)){
+    if(baseOct.value.match(/^[0-7]+$/)){
       let octal = baseOct.value
       let decimal = parseInt(octal, 8)
       let binary = parseInt(octal, 8).toString(2)
@@ -155,8 +170,12 @@ function calc(){
     result = 0
     if(selectOperation.value == 'sum'){
       result = (n1 + n2).toString(2)
-    }else{
+    }else if(selectOperation.value == 'sub'){
       result = (n1 - n2).toString(2)
+    }else if(selectOperation.value == 'div'){
+      result = (n1 / n2).toString(2)
+    }else if(selectOperation.value == 'mult'){
+      result = (n1 * n2).toString(2)
     }
     result_operation.value = result
   }else if(selectBase.value == 'octal'){
@@ -166,8 +185,12 @@ function calc(){
     result = 0
     if(selectOperation.value == 'sum'){
       result = (n1 + n2).toString(8)
-    }else{
+    }else if(selectOperation.value == 'sub'){
       result = (n1 - n2).toString(8)
+    }else if(selectOperation.value == 'div'){
+      result = (n1 / n2).toString(8)
+    }else if(selectOperation.value == 'mult'){
+      result = (n1 * n2).toString(8)
     }
     result_operation.value = result
   }else if(selectBase.value == 'hex'){
@@ -177,8 +200,12 @@ function calc(){
     result = 0
     if(selectOperation.value == 'sum'){
       result = (n1 + n2).toString(16)
-    }else{
+    }else if(selectOperation.value == 'sub'){
       result = (n1 - n2).toString(16)
+    }else if(selectOperation.value == 'div'){
+      result = (n1 / n2).toString(16)
+    }else if(selectOperation.value == 'mult'){
+      result = (n1 * n2).toString(16)
     }
     result_operation.value = result
 
@@ -189,8 +216,12 @@ function calc(){
     result = 0
     if(selectOperation.value == 'sum'){
       result = (n1 + n2)
-    }else{
+    }else if(selectOperation.value == 'sub'){
       result = (n1 - n2)
+    }else if(selectOperation.value == 'div'){
+      result = (n1 / n2)
+    }else if(selectOperation.value == 'mult'){
+      result = (n1 * n2)
     }
     result_operation.value = result
   }
