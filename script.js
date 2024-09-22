@@ -106,6 +106,9 @@ function convert(selectedBase){
       baseBinary.style.color = 'black'
     }else{
       baseBinary.style.color = 'red'
+      decimal_value_binary.value = ''
+      octal_value_binary.value = ''
+      hexadecimal_value_binary.value = ''
     }
   }else if(selectedBase == 'decimal'){
     if(baseDecimal.value.match(/^[0-9]+$/)){
@@ -121,6 +124,9 @@ function convert(selectedBase){
       baseDecimal.style.color = 'black'
     }else{
       baseDecimal.style.color = 'red'
+      binary_value_decimal.value = ''
+      octal_value_decimal.value = ''
+      hexadecimal_value_decimal.value = ''
     }
   }else if(selectedBase == 'hex'){
     if(baseHex.value.match(/^[0-9A-Fa-f]+$/)){
@@ -136,6 +142,10 @@ function convert(selectedBase){
       baseHex.style.color = 'black'
     }else{
       baseHex.style.color = 'red'
+      decimal_value_hex.value = ''
+      binary_value_hex.value = ''
+      octal_value_hex.value = ''
+
     }
    
 
@@ -153,6 +163,9 @@ function convert(selectedBase){
       baseOct.style.color = 'black'
     }else{
       baseOct.style.color = 'red'
+      decimal_value_octal.value = ''
+      binary_value_octal.value = ''
+      hexadecimal_value_octal.value = ''
     }
     
   }

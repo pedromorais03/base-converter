@@ -6,12 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* :root{
- 
- 
-} */
-
-body{
+:root{
   --white: #eee;
   --primary-color: #F5F5F5;
   --secondary-color: #48CFCB;
@@ -20,7 +15,6 @@ body{
   --text-color-secondary: #111;
   --button-secondary-color: #424242;
   --red: #880808;
-
 }
 
 body.dark-theme{
