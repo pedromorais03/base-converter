@@ -33,6 +33,7 @@
         <button onclick="change_base('oct')">Octal</button>
         <button onclick="change_base('decimal')">Decimal</button>
         <button onclick="change_base('operations')">Operations</button>
+        <button onclick="show_popup()">Table</button>
       </div>
 
       <div class="base" id="decimal">
@@ -117,6 +118,14 @@
         <span>Base64</span>
         <input type="text" id="base_value_base">
       </div> -->
+      
+      <div class="popup-overlay"></div>
+
+      <div class="popup">
+        <h2>Popup</h2>
+        <img src="./img/table.png">
+        <button onclick="close_popup()">Close</button>
+      </div>
 
     </main>
     <footer>

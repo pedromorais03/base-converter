@@ -23,6 +23,9 @@ const selectBase = document.getElementById("base_select")
 
 const spanMessage = document.querySelector(".message")
 
+const popup = document.querySelector(".popup")
+const popupOverlay = document.querySelector(".popup-overlay")
+
 let theme = localStorage.getItem("theme")
 
 if(theme == 'dark'){
@@ -216,4 +219,14 @@ function calc(){
     result_operation.value = result
   }
 
+}
+
+function show_popup(){
+  popup.style.display = 'flex'
+  popupOverlay.style.display = 'block'
+}
+
+function close_popup(){
+  popup.style.display = 'none'
+  popupOverlay.style.display = 'none'
 }
