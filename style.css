@@ -51,6 +51,7 @@ button:hover{
 }
 
 .switch .switch-image{
+  margin: 5px 5px 0 0;
   width: 28px;
 }
 

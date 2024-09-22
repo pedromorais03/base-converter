@@ -1,6 +1,5 @@
 const themeToggle = document.getElementById('theme-toggle')
 const switchImage = document.querySelector('.switch-image')
-const switchImageDiv = document.querySelector('.switch-image-div')
 
 const binaryDiv = document.querySelector('#binary')
 const octDiv = document.querySelector('#oct')
@@ -170,8 +169,6 @@ function calc(){
     spanMessage.style.display = 'none'
   }
 
-
-    
   if(selectBase.value == 'binary'){
     n1 = parseInt(first_number.value, 2)
     n2 = parseInt(second_number.value, 2)
