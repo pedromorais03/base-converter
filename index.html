@@ -38,7 +38,7 @@
 
       <div class="base" id="decimal">
         <span>Decimal</span>
-        <input id="base_value_decimal" type="text" placeholder="Insert your decimal value">
+        <input oninput="convert('decimal')" id="base_value_decimal" type="text" placeholder="Insert your decimal value">
         Binary: <input id="binary_value_decimal" type="text" placeholder="Binary" disabled>
         Octal: <input id="octal_value_decimal" type="text" placeholder="Octal" disabled>
         Hex: <input id="hexadecimal_value_decimal" type="text" placeholder="Hex" disabled>
@@ -48,7 +48,7 @@
 
       <div class="base" id="hex">
         <span>Hexadecimal</span>
-        <input id="base_value_hex" type="text" placeholder="Insert your hexadecimal value">
+        <input oninput="convert('hex')" id="base_value_hex" type="text" placeholder="Insert your hexadecimal value">
         Binary: <input id="binary_value_hex" type="text" placeholder="Binary" disabled>
         Octal: <input id="octal_value_hex" type="text" placeholder="Octal" disabled>
         Decimal: <input id="decimal_value_hex" type="text" placeholder="Decimal" disabled>
@@ -58,7 +58,7 @@
 
       <div class="base" id="oct">
         <span>Octal</span>
-        <input id="base_value_oct" type="text" placeholder="Insert your octal value">
+        <input oninput="convert('octal')" id="base_value_oct" type="text" placeholder="Insert your octal value">
         Binary: <input id="binary_value_octal" type="text" placeholder="Binary" disabled>
         Decimal: <input id="decimal_value_octal" type="text" placeholder="Octal" disabled>
         Hex: <input id="hexadecimal_value_octal" type="text" placeholder="Hex" disabled>
@@ -68,7 +68,7 @@
 
       <div class="base" id="binary">
         <span>Binary</span>
-        <input id="base_value_binary" type="text" placeholder="Insert your binary value">
+        <input oninput="convert('binary')" id="base_value_binary" type="text" placeholder="Insert your binary value">
         Decimal: <input id="decimal_value_binary" type="text" placeholder="Decimal" disabled>
         Octal: <input id="octal_value_binary" type="text" placeholder="Octal" disabled>
         Hex: <input id="hexadecimal_value_binary" type="text" placeholder="Hex" disabled>

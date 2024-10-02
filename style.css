@@ -190,6 +190,7 @@ input:checked + .slider:before {
 .container .popup{
   display: none;
   position: fixed;
+  height: fit-content;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -206,6 +207,10 @@ input:checked + .slider:before {
   gap: 20px;
 
   animation: fadeIn 1s ease;
+}
+
+.container .popup img{
+  height: 70vh;
 }
 
 .container .popup button{
